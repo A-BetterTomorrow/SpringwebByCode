@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<Appenders>
+    	<Console name="console" target="SYSTEM_OUT">
+        	<PatternLayout pattern="%-5p: %c - %m%n" />
+        </Console>
+	</Appenders>
+	
+	<!-- Application Loggers -->
+    <Loggers>
+        <Logger name="org.zerock.controller" level="info" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <Logger name="org.springframework.core" level="info" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <Logger name="org.springframework.beans" level="info" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <Logger name="org.springframework.context" level="info" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <Logger name="org.springframework.context" level="info" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+    </Loggers>
+    
+	<Root level="warn">
+		<AppenderRef ref="console" />
+	</Root>
+</Configuration>
